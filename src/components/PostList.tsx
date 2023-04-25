@@ -26,23 +26,7 @@ export default function PostList({ posts = [] }: Props) {
       {posts.map((post) => {
         const { slug, date, title, description, path, socialImage,pricing} = post;
         return (
-          // <li key={slug} className="group transition-colors">
-          //   <CustomLink href={path}>
-          //     <article className="space-y-2 rounded-xl p-4 transition-colors group-hover:bg-gray-100 dark:group-hover:bg-gray-800 xl:grid xl:grid-cols-4  xl:items-baseline xl:space-y-0">
-          //       <div className="space-y-3 xl:col-span-3">
-          //         <div>
-          //           <h3 className="text-lg font-bold tracking-tight text-gray-900 transition-colors dark:text-gray-100 sm:text-xl md:text-2xl">
-          //             {title}
-          //           </h3>
-          //         </div>
-          //         <div className="prose prose-sm max-w-none text-gray-500 transition-colors dark:text-gray-400 md:prose-base">
-          //           {description}
-          //         </div>
-          //       </div>
-          //     </article>
-          //   </CustomLink>
-          // </li>
-          <a key={slug} className="group transition-colors bg-gray-100 border border-gray-200 rounded-lg shadow-2xl">
+          <li key={slug} className="group transition-colors bg-gray-100 border border-gray-200 rounded-lg shadow-2xl list-none">
             <CustomLink href={path}>
               <div className="relative aspect-h-1 h-100 min-h-100 max-h-100 w-100 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
                 <img
@@ -97,23 +81,25 @@ export default function PostList({ posts = [] }: Props) {
                     {pricing}
                 </button>
                 <div>
-                  <a href="#" className="inline-flex border border-pink-900 rounded border-radius-4 px-4 py-1 items-center text-lg my-4 text-pink-600 hover:text-white hover:bg-blue-700">
+                  <span className="inline-flex border border-pink-900 rounded border-radius-4 px-4 py-1 items-center text-lg my-4 text-pink-600 hover:text-white hover:bg-blue-700">
                       #e-commerce
                       {/* <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg> */}
-                  </a>
+                  </span>
                 </div>
                 <div className="w-full grid w-full gap-2 md:grid-cols-2">
-                  <a className="inline-block border border-blue-300 text-white text-center bg-gradient-to-r from-blue-300 via-indigo-500 to-pink-400 hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-600 hover:to-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                  <span className="inline-block border border-blue-300 text-white text-center bg-gradient-to-r from-blue-300 via-indigo-500 to-pink-400 hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-600 hover:to-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
 
                       <svg className="w-5 h-5 ml-9" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
-                  </a>
-                  <a className="inline-block border border-blue-300 text-white text-center bg-gradient-to-r from-blue-300 via-indigo-500 to-pink-400 hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-600 hover:to-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                  </span>
+                  <span className="inline-block border border-blue-300 text-white text-center bg-gradient-to-r from-blue-300 via-indigo-500 to-pink-400 hover:bg-gradient-to-r hover:from-pink-400 hover:via-indigo-600 hover:to-blue-300 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                       <svg className="w-5 h-5 ml-9" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg>
-                  </a>
+                  </span>
                 </div>
-              </div>
+              </div>            
+              
             </CustomLink>
-          </a>
+          </li>
+      
         );
       })}
     </div>

@@ -29,9 +29,11 @@ export const Post = defineDocumentType(() => ({
     },
     pricing: {
       type: 'string',      
+      required: true,
     },
     start_price: {
       type: 'string',
+      required: true,
     },
     socialImage: {
       type: 'string',

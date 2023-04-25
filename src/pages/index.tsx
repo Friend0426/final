@@ -80,6 +80,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const locale = context.locale!;
 
   const commandPalettePosts = getCommandPalettePosts();
+  console.log(allPostsNewToOld);
   const posts = allPostsNewToOld.map((post) => ({
     slug: post.slug,
     date: post.date,
@@ -103,6 +104,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 };
 
 const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
+  
   const { t } = useTranslation(['indexPage', 'common']);
 
   useCommandPalettePostActions(commandPalettePosts);
@@ -151,8 +153,7 @@ const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
           </svg>
         </span>
         <span className='px-2'>
-          <Input {...getInputProps()} />
-          
+          <Input placeholder="............" {...getInputProps()} />          
         </span>
         {groupedOptions.length > 0 ? (
           <Listbox {...getListboxProps()}>

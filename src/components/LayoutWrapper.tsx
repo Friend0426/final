@@ -9,7 +9,7 @@ type Props = {
 const LayoutWrapper = ({ children }: Props) => {
   return (
     // <div className="flex min-h-screen w-full flex-col justify-between">
-     <div  className=" blur-bg flex min-h-screen w-full flex-col justify-between" style={{backgroundImage: "url('http://localhost:3000/images/11.png')"}}>
+     <div  className=" blur-bg flex min-h-screen w-full flex-col justify-between" style={{backgroundImage: "url('/images/11.png')"}}>
       <div>
         <Header />
 

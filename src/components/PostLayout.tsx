@@ -40,6 +40,7 @@ export interface PostForPostLayout {
   date: string;
   title: string;
   description: string;
+  pricing: string;
   body: { raw: string };
 }
 

@@ -18,7 +18,7 @@ export default function Header() {
           <div>
             <CustomLink href="/" aria-label={headerConfigs.title}>
                 { <div className="transform translate-x-[-10px] translate-y-[20px] h-20 block w-164 ">
-                    <img src="http://localhost:3000/images/robi-2-0.gif" className="object-cover w-full h-full" alt="Your image"/>
+                    <img src="/images/robi-2-0.gif" className="object-cover w-full h-full" alt="Your image"/>
                 </div> }
             </CustomLink>
           </div>

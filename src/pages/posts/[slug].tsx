@@ -97,6 +97,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     description: postFull.description,
     path: postFull.path,
     socialImage: postFull.socialImage || null,
+    pricing: postFull.pricing,
     body: {
       code: postFull.body.code,
       raw: postFull.body.raw,
@@ -177,6 +178,7 @@ const PostPage: NextPage<Props> = ({
 
       
       <PostLayout post={post} prevPost={prevPost} nextPost={nextPost}>
+        <MDXContent components={mdxComponents} />
       </PostLayout>
     </LayoutPerPage>
   );
